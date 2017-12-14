@@ -1,0 +1,11 @@
+<div>
+    <h1>
+        Search User By Id :
+    </h1>
+    <div>
+        <input type="text" name="user.loginId" #loginId placeholder="Enter user login Id" />
+        <input type="button" (click)="getUserDetails(loginId.value)" name="Retrieve" value="Retrieve" />
+    </div>
+
+    <app-user-detail [selectedUser]="user"></app-user-detail>
+</div>
