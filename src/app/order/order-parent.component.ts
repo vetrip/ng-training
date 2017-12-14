@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OrderService } from './service/order.service';
 
 @Component({
   selector: 'app-order-parent',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderParentComponent implements OnInit {
 
-  constructor() { }
+  constructor(protected orderService: OrderService) { }
 
   ngOnInit() {
   }

@@ -5,12 +5,11 @@ import { UserComponent } from './user/user.component';
 import { AppComponent } from './app.component';
 import { TemplateFormsComponent } from './template-forms.component';
 import { ReactiveFormsComponent } from './reactive-forms.component';
-import { OrderParentComponent } from './order/order-parent.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/searchUser', pathMatch: 'full' },
   { path: 'forms', component: DashboardComponent },
-  { path: 'order', component: OrderParentComponent },
+  { path: 'order', loadChildren: './order/order.module#OrderModule' },
   { path: 'searchUser', component: UserComponent },
   { path: 'forms/templateForms', component: TemplateFormsComponent },
   { path: 'forms/reactiveForms', component: ReactiveFormsComponent }
@@ -18,7 +17,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
 
-    RouterModule.forRoot(routes , {enableTracing: false})
+    RouterModule.forRoot(routes , {enableTracing: true})
   ],
   declarations: [],
   exports: [ RouterModule ]

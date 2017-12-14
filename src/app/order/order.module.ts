@@ -5,18 +5,34 @@ import { MemberComponent } from './member.component';
 import { PhysicianComponent } from './physician.component';
 import { DiagnosisSearchComponent } from './diagnosis-search.component';
 import { DiagnosisListComponent } from './diagnosis-list.component';
+import { OrderService } from './service/order.service';
+import { RouterModule } from '@angular/router';
+import { Routes } from '@angular/router/src/config';
 
 
+const routes: Routes = [
+  {path: '', component : OrderParentComponent}
+];
 
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(routes)
   ],
   declarations: [OrderParentComponent,
                  MemberComponent,
                  PhysicianComponent,
                  DiagnosisSearchComponent,
-                 DiagnosisListComponent]
+                 DiagnosisListComponent],
+  providers: [OrderService],
+  exports: [ RouterModule]
 })
-export class OrderModule { }
+export class OrderModule {
+  /* static forRoot() {
+    return {
+      ngModule: OrderModule,
+      providers: [OrderService]
+    };
+  } */
+}

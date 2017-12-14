@@ -32,7 +32,7 @@ import { OrderModule } from './order/order.module';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    OrderModule
+   // OrderModule.forRoot()
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

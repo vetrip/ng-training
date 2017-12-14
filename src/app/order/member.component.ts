@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OrderService } from './service/order.service';
 
 @Component({
   selector: 'app-member',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemberComponent implements OnInit {
 
-  constructor() { }
+  constructor(private orderService: OrderService) { }
 
   ngOnInit() {
+  }
+
+  updateMember( memberId: string) {
+    console.log(memberId);
+    this.orderService.updateMember(memberId);
   }
 
 }
