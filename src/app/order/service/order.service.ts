@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Order } from '../model/order.model';
+import { Member } from '../model/member.model';
 
 
 @Injectable()
@@ -14,7 +15,7 @@ export class OrderService {
     return this.order;
   }
 
-  updateMember( memberId: string ) {
-    this.order.member.id = memberId;
+  updateMember( member: Member ) {
+    this.order.member = member;
   }
 }

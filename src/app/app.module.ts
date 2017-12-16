@@ -12,8 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { TemplateFormsComponent } from './template-forms.component';
 import { ReactiveFormsComponent } from './reactive-forms.component';
-import { ErrorComponent } from './error/error.component';
 import { OrderModule } from './order/order.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -23,8 +23,7 @@ import { OrderModule } from './order/order.module';
     UserDetailComponent,
     DashboardComponent,
     TemplateFormsComponent,
-    ReactiveFormsComponent,
-    ErrorComponent
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +31,7 @@ import { OrderModule } from './order/order.module';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
+    SharedModule,
    // OrderModule.forRoot()
   ],
   providers: [UserService],
