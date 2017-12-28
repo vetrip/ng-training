@@ -1,6 +1,6 @@
 <div class="container">
     <h1>Template Forms example</h1>
-    <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+    <form (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="firstName">First Name</label>
             <input [(ngModel)]="user.firstName" name="firstName" type="text" class="form-control" #firstname="ngModel" required />
