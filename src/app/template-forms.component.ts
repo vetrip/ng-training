@@ -4,7 +4,7 @@ import { User } from './user/user';
 @Component({
   selector: 'app-template-forms',
   templateUrl: './template-forms.component.html',
-  styleUrls: ['./template-forms.component.css']
+  styleUrls: ['./template-forms.component.scss']
 })
 export class TemplateFormsComponent implements OnInit {
   user: User = {
